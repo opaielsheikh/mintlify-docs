@@ -1,0 +1,323 @@
+---
+title: 'Post-Meeting Actions'
+description: 'What happens after your meeting ends'
+icon: 'envelope'
+---
+
+# What Happens After Your Meeting
+
+Learn about the automated actions and notifications that occur when your meeting concludes.
+
+## Automatic Post-Meeting Process
+
+When your meeting ends, the AI agent automatically:
+
+1. **Processes Recording** - Converts raw recording to viewable format
+2. **Generates Transcript** - Creates accurate text transcript with speaker labels
+3. **Creates Summary** - Produces meeting summary with key points and action items
+4. **Sends Notifications** - Distributes summaries based on your settings
+
+<Note>
+  Processing time varies based on meeting length. Most meetings are processed within 5-15 minutes.
+</Note>
+
+## Email Notifications
+
+### Default Behavior
+
+By default, the AI agent sends email notifications to:
+
+- ✅ Meeting organizer
+- ✅ All meeting participants (if enabled)
+- ✅ Specified distribution list
+- ✅ Workspace members (optional)
+
+### What's Included in the Email
+
+<Tabs>
+  <Tab title="Summary Email">
+    **Standard Summary Email Contains**:
+    - Meeting title and date
+    - Duration and participants
+    - Key discussion points
+    - Action items with assignees
+    - Decisions made
+    - Links to full transcript and recording
+    - Next steps
+  </Tab>
+  
+  <Tab title="Detailed Email">
+    **Detailed Email Contains**:
+    - Everything in summary email
+    - Speaker-by-speaker breakdown
+    - Timestamps for important moments
+    - Questions raised and answered
+    - Attachments and shared links
+    - Sentiment analysis
+  </Tab>
+  
+  <Tab title="Quick Email">
+    **Quick Email Contains**:
+    - Brief meeting overview
+    - Top 3 action items
+    - Direct link to full summary
+    - Recording link
+  </Tab>
+</Tabs>
+
+### Choosing Not to Send Emails
+
+You can configure meetings without email notifications:
+
+#### For Individual Meetings
+
+When scheduling:
+1. Expand **Advanced Options**
+2. Under **Post-Meeting Actions**
+3. Uncheck **"Send email summary"**
+4. Save meeting
+
+#### For All Meetings (Default Setting)
+
+1. **Settings → Notifications**
+2. **Post-Meeting Emails** section
+3. Set **"Send summary emails"** to **OFF**
+4. **Save changes**
+
+<Warning>
+  Even with emails disabled, summaries are still available in your dashboard.
+</Warning>
+
+## Alternative to Email Notifications
+
+### Dashboard Access
+
+All meeting information is always available in your dashboard:
+
+1. **Navigate to "Past Meetings"**
+2. **Click on any meeting**
+3. **Access**:
+   - Full transcript
+   - Recording playback
+   - Summary and insights
+   - Action items
+   - Shared files
+
+### Integration Notifications
+
+Instead of email, send notifications through:
+
+<CardGroup cols={2}>
+  <Card title="Slack" icon="slack">
+    Post summaries to Slack channels
+  </Card>
+  <Card title="Microsoft Teams" icon="microsoft">
+    Send summaries to Teams channels
+  </Card>
+  <Card title="Asana" icon="list-check">
+    Create tasks from action items
+  </Card>
+  <Card title="Notion" icon="book">
+    Save summaries to Notion pages
+  </Card>
+</CardGroup>
+
+Configure in **Settings → Integrations → Post-Meeting Actions**
+
+## Customizing Email Behavior
+
+### Who Receives Emails
+
+Fine-tune email recipients:
+
+1. **Settings → Notifications → Email Recipients**
+2. **Configure options**:
+   - ☐ Meeting organizer only
+   - ☐ All participants
+   - ☐ Participants who attended
+   - ☐ Specific email addresses
+   - ☐ Workspace members
+   - ☐ Custom distribution list
+
+### Email Timing
+
+Control when emails are sent:
+
+```yaml
+Delivery Options:
+  - Immediate: Right after processing (default)
+  - Delayed: 30 minutes after meeting
+  - Scheduled: Specific time daily (e.g., 5 PM)
+  - Digest: Daily summary of all meetings
+```
+
+### Email Templates
+
+Customize email content:
+
+1. **Settings → Templates → Email Templates**
+2. **Choose or create template**:
+   - Executive Summary
+   - Detailed Breakdown
+   - Action Items Only
+   - Custom Template
+3. **Customize content**:
+   - Include/exclude sections
+   - Adjust formatting
+   - Add branding
+4. **Save template**
+
+## Notification Preferences
+
+### Per-Meeting Basis
+
+Override default settings for specific meetings:
+
+When scheduling a meeting:
+1. **Advanced Options → Notifications**
+2. **Select notification preference**:
+   - Use default settings
+   - Send emails to all
+   - Send to organizer only
+   - Don't send emails
+   - Custom recipients
+
+### Global Preferences
+
+Set default behavior for all meetings:
+
+1. **Settings → Notifications**
+2. **Configure**:
+   - Email notifications: ON/OFF
+   - Default recipients
+   - Email template
+   - Delivery timing
+   - Digest preferences
+
+## What Gets Generated
+
+### Always Created
+
+Regardless of email settings, every meeting generates:
+
+- 📝 **Full Transcript** - Complete verbatim text
+- 🎥 **Recording** - Video/audio recording (if enabled)
+- 📊 **Summary** - AI-generated meeting summary
+- ✅ **Action Items** - Extracted tasks and owners
+- 🔑 **Key Points** - Important discussion topics
+- 📈 **Analytics** - Meeting insights and metrics
+
+### Optional Generation
+
+Based on your settings:
+
+- 📄 **PDF Report** - Formatted downloadable report
+- 📧 **Email Distribution** - Sent to participants
+- 💬 **Chat Integration** - Posted to Slack/Teams
+- 📋 **Task Creation** - Auto-created in project tools
+- 📁 **File Storage** - Archived to cloud storage
+
+## Data Retention
+
+### Storage Duration
+
+<Info>
+  Default retention periods:
+  - **Recordings**: 90 days
+  - **Transcripts**: 1 year
+  - **Summaries**: Indefinite
+  - **Action Items**: Until completed or manually deleted
+  
+  Customize in **Settings → Data Management**
+</Info>
+
+### Accessing Historical Data
+
+Find past meetings:
+
+1. **Dashboard → Past Meetings**
+2. **Use filters**:
+   - Date range
+   - Participants
+   - Keywords
+   - Status
+3. **Search** by meeting title or topic
+4. **Click to view** full details
+
+## Privacy Controls
+
+### Limiting Email Distribution
+
+For sensitive meetings:
+
+1. When scheduling, mark as **"Confidential"**
+2. Emails sent **only to organizer**
+3. Other participants see **notification without content**
+4. Full access requires **dashboard login**
+
+### Restricting Access
+
+Control who can view meeting data:
+
+1. **Meeting → Settings** (gear icon)
+2. **Access Control**:
+   - Participants only
+   - Workspace members
+   - Specific individuals
+   - Public link (with password)
+3. **Save access settings**
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Didn't receive email summary">
+    **Check these**:
+    - Spam/junk folder
+    - Email address is correct in your profile
+    - Email notifications are enabled
+    - Meeting has finished processing
+    - Subscription is active
+    
+    **Find summary**: Always available in dashboard under Past Meetings
+  </Accordion>
+  
+  <Accordion title="Email sent to wrong recipients">
+    **Review**:
+    - Meeting notification settings
+    - Default recipient settings
+    - Calendar invitation participants
+    
+    **Resend**: Use "Resend Summary" option in dashboard
+  </Accordion>
+  
+  <Accordion title="Summary is incomplete">
+    **Possible reasons**:
+    - Meeting ended abruptly
+    - Recording failed mid-meeting
+    - Processing error occurred
+    
+    **Solutions**:
+    - Check dashboard for partial data
+    - Re-process meeting if option available
+    - Contact support with meeting ID
+  </Accordion>
+  
+  <Accordion title="Want to stop receiving emails">
+    **Quick fix**:
+    1. Click "Unsubscribe" at bottom of email
+    2. Or: Settings → Notifications → Turn off email summaries
+    
+    You'll still get dashboard notifications
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Configure Email Settings" icon="gear" href="/meeting-process/email-settings">
+    Detailed email notification configuration
+  </Card>
+  <Card title="Review Meeting Summaries" icon="file-lines" href="/meeting-process/review-summary">
+    Learn how to access and use summaries
+  </Card>
+</CardGroup>

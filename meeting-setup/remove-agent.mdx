@@ -1,0 +1,282 @@
+---
+title: 'Remove AI Agent from Calls'
+description: 'How to remove the AI agent from meetings when needed'
+icon: 'phone-slash'
+---
+
+# How to Remove the AI Agent from Calls
+
+Learn how to remove the AI agent from ongoing or scheduled meetings.
+
+## Removing from Live Meetings
+
+### Method 1: Through Dashboard
+
+The quickest way to remove the agent during a live call:
+
+1. **Open your dashboard**
+2. **Navigate to "Active Meetings"**
+3. **Find the current meeting**
+4. **Click "Remove Agent"** or **"End Session"**
+5. **Confirm the action**
+
+<img src="/assets/RemoveAIAgentfromCalls/removeAgent.png" alt="Remove AI Agent from Call" />
+
+The agent will leave the call within 5-10 seconds.
+
+### Method 2: In-Meeting Command
+
+Some platforms support in-meeting commands:
+
+#### Zoom
+- Open the participants panel
+- Find the AI agent
+- Click "Remove" or "Remove Participant"
+
+#### Google Meet
+- Click on the participants icon
+- Hover over the AI agent
+- Click the three-dot menu
+- Select "Remove from call"
+
+#### Microsoft Teams
+- Open participants panel
+- Right-click on the AI agent
+- Select "Remove from meeting"
+
+### Method 3: Voice Command
+
+If voice commands are enabled:
+
+```
+"Hey [Bot Name], please leave the meeting"
+```
+
+or
+
+```
+"[Bot Name], end recording and exit"
+```
+
+## Canceling Scheduled Meetings
+
+### Before the Meeting Starts
+
+#### Through Dashboard
+
+1. **Go to "Upcoming Meetings"**
+2. **Select the meeting you want to cancel**
+3. **Click "Cancel Agent Attendance"**
+4. **Confirm cancellation**
+
+#### Through Calendar
+
+1. **Open your calendar**
+2. **Edit the meeting**
+3. **Remove the AI agent from participants**
+4. **Save changes**
+
+<Note>
+  The meeting itself remains scheduled; only the AI agent is removed.
+</Note>
+
+### Bulk Cancellation
+
+To remove the agent from multiple meetings:
+
+1. **Dashboard → Meetings → Scheduled**
+2. **Click "Bulk Actions"**
+3. **Select meetings to cancel**
+4. **Choose "Remove Agent"**
+5. **Confirm bulk cancellation**
+
+## Disable Auto-Join
+
+To prevent the agent from automatically joining future meetings:
+
+### Temporarily Disable
+
+1. **Settings → Calendar Integration**
+2. **Toggle "Auto-Join" to OFF**
+3. **Set duration** (until specific date or indefinitely)
+4. **Save changes**
+
+### For Specific Calendar
+
+Disable auto-join for a particular calendar:
+
+1. **Settings → Calendar Integration**
+2. **Find the calendar**
+3. **Click settings icon**
+4. **Disable "Auto-Join for this calendar"**
+5. **Save**
+
+### Using Do Not Disturb
+
+Enable Do Not Disturb mode to prevent all auto-joins:
+
+1. **Click your profile icon**
+2. **Select "Do Not Disturb"**
+3. **Choose duration**:
+   - 1 hour
+   - 4 hours
+   - Until tomorrow
+   - Custom
+4. **Confirm**
+
+<Info>
+  During Do Not Disturb, the agent won't auto-join any meetings, but you can still manually add it.
+</Info>
+
+## Emergency Stop
+
+For immediate removal with data preservation:
+
+### Pause and Remove
+
+1. **Dashboard → Active Meetings**
+2. **Click "Emergency Stop"**
+3. **Choose action**:
+   - Save and Exit (recommended)
+   - Exit Without Saving
+   - Cancel
+4. **Confirm**
+
+<Warning>
+  "Exit Without Saving" will discard all meeting data collected so far.
+</Warning>
+
+## What Happens When Agent is Removed?
+
+### Data Preservation
+
+When properly removed, the AI agent will:
+
+- ✅ Save all recorded content up to that point
+- ✅ Generate a partial transcript
+- ✅ Create a summary of the session so far
+- ✅ Store action items identified before removal
+- ✅ Send notifications (if enabled)
+
+### Notifications
+
+Depending on your settings:
+
+- Meeting host receives removal confirmation
+- Participants may be notified (optional)
+- Summary email includes note about early termination
+- Dashboard shows status as "Ended Early"
+
+## Preventing Accidental Joins
+
+### Exclude Specific Meeting Types
+
+Set rules to prevent auto-join:
+
+1. **Settings → Auto-Join Rules**
+2. **Add exclusion rule**:
+   - Meetings with certain keywords (e.g., "Personal", "Private")
+   - Specific time ranges
+   - Meetings with fewer than X participants
+   - One-on-one meetings
+3. **Save rules**
+
+### Private Meeting Tags
+
+Mark meetings as private:
+
+#### In Calendar
+Add `#private` or `[Private]` to meeting title
+
+#### In Dashboard
+When scheduling, check "Private Meeting" option
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Agent won't leave the meeting">
+    **Try these steps**:
+    1. Refresh your dashboard
+    2. Try removing again
+    3. Use platform-specific removal (Zoom/Meet/Teams)
+    4. Contact support if issue persists
+    
+    **Note**: There may be a 10-15 second delay before the agent exits.
+  </Accordion>
+  
+  <Accordion title="Agent rejoined after removal">
+    **Possible causes**:
+    - Auto-join is still enabled
+    - Agent was manually re-invited
+    - Recurring meeting settings
+    
+    **Solutions**:
+    - Disable auto-join for this meeting
+    - Remove from calendar completely
+    - Update recurring meeting settings
+  </Accordion>
+  
+  <Accordion title="Recording lost after removal">
+    **Check these locations**:
+    - Dashboard → Past Meetings
+    - Email for partial summary
+    - Backup storage (if enabled)
+    
+    If data is truly lost, contact support immediately.
+  </Accordion>
+  
+  <Accordion title="Can't cancel scheduled meeting">
+    **Verify**:
+    - You have permission to modify the meeting
+    - Meeting hasn't already started
+    - Calendar integration is active
+    
+    **Alternative**: Remove AI agent email from calendar invitation
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Use Pause First" icon="pause">
+    Consider pausing instead of removing for temporary breaks
+  </Card>
+  <Card title="Communicate" icon="comments">
+    Inform participants before removing the agent
+  </Card>
+  <Card title="Save Data" icon="floppy-disk">
+    Always choose "Save and Exit" unless there's a privacy concern
+  </Card>
+  <Card title="Review Settings" icon="gear">
+    Configure auto-join rules to prevent unwanted joins
+  </Card>
+</CardGroup>
+
+## Privacy Considerations
+
+### Sensitive Discussions
+
+If your meeting enters a sensitive topic:
+
+1. **Quickly remove the agent** using dashboard
+2. **Or use voice command** for faster removal
+3. **Data is automatically deleted** if configured in privacy settings
+4. **Resume recording** later if needed
+
+### Configure Privacy Settings
+
+1. **Settings → Privacy & Security**
+2. **Enable "Quick Delete on Removal"** for sensitive meetings
+3. **Set retention policy** for partial recordings
+4. **Configure who can remove the agent**
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Post-Meeting Actions" icon="envelope" href="/meeting-process/post-meeting-actions">
+    Learn what happens after meetings
+  </Card>
+  <Card title="Privacy Settings" icon="shield" href="/essentials/settings">
+    Configure privacy and security options
+  </Card>
+</CardGroup>

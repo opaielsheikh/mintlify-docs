@@ -1,0 +1,481 @@
+---
+title: 'Export Meeting Data'
+description: 'Download and share your meeting data via email or direct download'
+icon: 'download'
+---
+
+# Export Meeting Data
+
+Learn how to export individual meetings or bulk data via email or download.
+
+## Export Methods
+
+<CardGroup cols={2}>
+  <Card title="Direct Download" icon="download">
+    Download files directly to your computer
+  </Card>
+  <Card title="Email Delivery" icon="envelope">
+    Receive export files via email
+  </Card>
+  <Card title="Cloud Storage" icon="cloud">
+    Export to Google Drive, Dropbox, etc.
+  </Card>
+  <Card title="Bulk Export" icon="database">
+    Export all meetings at once
+  </Card>
+</CardGroup>
+
+## Export Single Meeting
+
+### From Meeting Dashboard
+
+<Steps>
+  <Step title="Open Meeting Details">
+    Navigate to your meeting dashboard and select the meeting you want to export.
+    <img src="/assets/ExportMeetingData/1.png" alt="Select Meeting" />
+  </Step>
+  <Step title="Click Export Button">
+    Click the "Export" button (download icon) to open export options.
+    <img src="/assets/ExportMeetingData/2.png" alt="Export Button" />
+  </Step>
+  <Step title="Choose What to Export">
+    Select the content you want to export: Recording, Transcript, Summary, or Complete package.
+    <img src="/assets/ExportMeetingData/3.png" alt="Choose Export Content" />
+  </Step>
+  <Step title="Select Format">
+    Choose your preferred file format for the export.
+    <img src="/assets/ExportMeetingData/4.png" alt="Select Format" />
+  </Step>
+  <Step title="Download or Email">
+    Click to download directly or send via email.
+    <img src="/assets/ExportMeetingData/5.png" alt="Download or Email" />
+  </Step>
+</Steps>
+
+### Available Formats
+
+<Tabs>
+  <Tab title="Recording">
+    **Video Formats**:
+    - MP4 (High Quality - 1080p)
+    - MP4 (Standard - 720p)
+    - WebM
+    
+    **Audio Formats**:
+    - MP3 (High Quality)
+    - MP3 (Compressed)
+    - WAV (Uncompressed)
+  </Tab>
+  
+  <Tab title="Transcript">
+    **Text Formats**:
+    - TXT (Plain text)
+    - PDF (Formatted)
+    - DOCX (Microsoft Word)
+    - JSON (Raw data)
+    
+    **Subtitle Formats**:
+    - SRT
+    - VTT
+    - SubRip
+  </Tab>
+  
+  <Tab title="Summary">
+    **Document Formats**:
+    - PDF (Formatted report)
+    - DOCX (Editable)
+    - HTML (Web format)
+    - Markdown (.md)
+    
+    **Data Formats**:
+    - JSON (Structured data)
+    - CSV (Action items)
+  </Tab>
+  
+  <Tab title="Complete Package">
+    **ZIP Archive containing**:
+    - Video recording (MP4)
+    - Audio file (MP3)
+    - Full transcript (PDF)
+    - Meeting summary (PDF)
+    - Action items (CSV)
+    - Metadata (JSON)
+    - Participant list
+  </Tab>
+</Tabs>
+
+## Bulk Export
+
+### Export All Meetings
+
+1. **Settings → Data Export**
+2. **Click "Export All Data"**
+3. **Configure export**:
+   - Date range: All time / Last year / Custom
+   - Content type: Everything / Specific items
+   - Format: ZIP archive
+4. **Start export**
+5. **Receive email** when ready (large exports may take time)
+
+### Export by Filter
+
+Export specific subset of meetings:
+
+1. **Dashboard → Meetings**
+2. **Apply filters**:
+   - Date range
+   - Participants
+   - Keywords/tags
+   - Meeting type
+3. **Select meetings** (or "Select All")
+4. **Click "Export Selected"**
+5. **Choose format and destination**
+
+### Scheduled Exports
+
+Automate regular exports:
+
+```yaml
+Export Schedule Example:
+  Frequency: Weekly (every Monday)
+  Content: Last week's meetings
+  Format: Complete package (ZIP)
+  Delivery: Email to admin@company.com
+  Backup: Google Drive folder
+```
+
+#### Setup
+
+1. **Settings → Data Export → Scheduled Exports**
+2. **Create New Schedule**
+3. **Configure**:
+   - Frequency (Daily/Weekly/Monthly)
+   - Content filter
+   - Format
+   - Delivery method
+4. **Save schedule**
+
+## Email Delivery
+
+### Send to Email
+
+Export files sent to your inbox:
+
+1. **Select meeting or data to export**
+2. **Choose "Send via Email"**
+3. **Enter recipient email(s)**
+4. **Optional message**
+5. **Click "Send"**
+
+### Email Options
+
+<AccordionGroup>
+  <Accordion title="Attachment Limits">
+    **Size limits**:
+    - Direct attachment: Up to 25 MB
+    - Large files: Download link (expires in 7 days)
+    - Very large: Cloud storage link
+    
+    Recordings are usually sent as links.
+  </Accordion>
+  
+  <Accordion title="Multiple Recipients">
+    Send to multiple people:
+    - Enter emails separated by commas
+    - Or select from workspace members
+    - Maximum: 20 recipients per send
+  </Accordion>
+  
+  <Accordion title="Scheduled Delivery">
+    Schedule email for later:
+    - Send immediately
+    - Schedule for specific time
+    - Recurring schedule (daily/weekly)
+  </Accordion>
+</AccordionGroup>
+
+### Email Content Example
+
+```
+Subject: Meeting Export: Product Review - Dec 2, 2024
+
+Hi [Name],
+
+Here's the export you requested for the meeting:
+Product Review - Dec 2, 2024
+
+Participants: John Smith, Sarah Jones, Mike Chen
+Duration: 42 minutes
+
+Included in this export:
+✓ Video Recording (MP4)
+✓ Full Transcript (PDF)
+✓ Meeting Summary (PDF)
+✓ Action Items (CSV)
+
+[Download All (124 MB)]
+
+This link expires in 7 days.
+
+---
+AI Meeting Assistant
+```
+
+## Download Options
+
+### Direct Download
+
+Download immediately to your device:
+
+1. **Click "Download"**
+2. **File saves to Downloads folder****
+3. **Access offline**
+
+<Info>
+  Download speeds depend on file size and internet connection.
+  - Transcript: Instant
+  - Summary: Instant
+  - Recording (30 min): ~2-5 minutes
+  - Recording (60 min): ~5-10 minutes
+</Info>
+
+### Cloud Storage Export
+
+Save directly to cloud:
+
+<Tabs>
+  <Tab title="Google Drive">
+    1. Connect Google Drive integration
+    2. Export → "Save to Google Drive"
+    3. Choose folder
+    4. Files upload automatically
+  </Tab>
+  
+  <Tab title="Dropbox">
+    1. Connect Dropbox integration
+    2. Export → "Save to Dropbox"
+    3. Select destination folder
+    4. Auto-organized by date
+  </Tab>
+  
+  <Tab title="OneDrive">
+    1. Connect Microsoft OneDrive
+    2. Export → "Save to OneDrive"
+    3. Choose location
+    4. Sync across devices
+  </Tab>
+</Tabs>
+
+## Custom Export Settings
+
+### Customize Export Content
+
+Fine-tune what's included:
+
+1. **Export → Advanced Options**
+2. **Select components**:
+   - ☑ Video recording
+   - ☑ Audio only
+   - ☑ Transcript with timestamps
+   - ☑ Transcript without timestamps
+   - ☑ Summary report
+   - ☑ Action items list
+   - ☑ Participant info
+   - ☑ Analytics data
+   - ☑ Comments & highlights
+3. **Choose format for each**
+4. **Export**
+
+### Transcript Customization
+
+When exporting transcripts:
+
+```yaml
+Transcript Options:
+  Include Timestamps: Yes / No
+  Speaker Labels: Yes / No / Anonymize
+  Paragraphs: Yes / No (continuous)
+  Confidence Scores: Yes / No
+  Edit History: Include / Exclude
+  Formatting: Plain / Styled
+```
+
+### Video/Audio Customization
+
+Recording export options:
+
+- **Quality**: High / Medium / Low
+- **Range**: Full / Custom time range
+- **Chapters**: Include chapter markers
+- **Captions**: Burn-in subtitles: Yes / No
+- **Format**: MP4 / AVI / WebM
+
+## Share Exported Data
+
+### Generate Share Link
+
+Create shareable download links:
+
+1. **Export meeting**
+2. **Click "Create Share Link"**
+3. **Configure access**:
+   - Password protection: On / Off
+   - Expiration: 1 day / 7 days / 30 days / Never
+   - Download limit: Unlimited / 10 / 50 / 100
+4. **Copy link**
+5. **Share with anyone**
+
+### Access Control
+
+Protect sensitive exports:
+
+- **Password**: Required to download
+- **Email verification**: Recipient must verify email
+- **Watermark**: Add watermark to videos
+- **DRM**: Digital rights management (enterprise)
+
+## Data Format Details
+
+### JSON Export
+
+For developers and integrations:
+
+```json
+{
+  "meeting_id": "mtg_123",
+  "title": "Product Review",
+  "date": "2024-12-02T15:00:00Z",
+  "duration_seconds": 2520,
+  "participants": [
+    {
+      "name": "John Smith",
+      "email": "john@example.com",
+      "speaking_time": 840
+    }
+  ],
+  "transcript": [
+    {
+      "speaker": "John Smith",
+      "text": "Let's start with the roadmap...",
+      "timestamp": "00:00:15",
+      "confidence": 0.98
+    }
+  ],
+  "summary": {
+    "key_points": ["Point 1", "Point 2"],
+    "action_items": [
+      {
+        "task": "Review designs",
+        "assignee": "Sarah",
+        "due_date": "2024-12-09"
+      }
+    ],
+    "decisions": ["Decision 1", "Decision 2"]
+  }
+}
+```
+
+### CSV Export
+
+Action items as spreadsheet:
+
+| Task | Assignee | Due Date | Priority | Status |
+|------|----------|----------|----------|--------|
+| Review designs | Sarah Jones | 2024-12-09 | High | Pending |
+| Update docs | Mike Chen | 2024-12-15 | Medium | Pending |
+
+## Storage & Retention
+
+### Local Storage
+
+Downloaded files:
+- Stored on your device
+- Your responsibility to backup
+- No expiration
+- Take up local storage space
+
+### Cloud Storage
+
+Files in cloud storage:
+- Subject to retention policy
+- Automatically backed up
+- Accessible from anywhere
+- Count toward storage quota
+
+<Warning>
+  **Retention Policy**:
+  - Active accounts: Indefinite
+  - Canceled accounts: 90 days
+  - Deleted meetings: 30-day recovery window
+  
+  Export important data before deletion!
+</Warning>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Export failing or taking too long">
+    **Solutions**:
+    - Break into smaller exports
+    - Use date range filters
+    - Try different time (off-peak hours)
+    - Check internet connection
+    - Contact support for large exports
+  </Accordion>
+  
+  <Accordion title="Downloaded file won't open">
+    **Check**:
+    - File downloaded completely
+    - Correct application to open file
+    - File isn't corrupted (re-download)
+    - Format is supported by your device
+  </Accordion>
+  
+  <Accordion title="Email not received">
+    **Verify**:
+    - Check spam/junk folder
+    - Email address is correct
+    - Export has finished processing
+    - Inbox isn't full
+    
+    **Alternative**: Download directly from dashboard
+  </Accordion>
+  
+  <Accordion title="Share link not working">
+    **Possible reasons**:
+    - Link has expired
+    - Download limit reached
+    - Wrong password entered
+    - File was deleted
+    
+    **Solution**: Generate new share link
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Regular Backups" icon="clock">
+    Schedule weekly/monthly exports for backup
+  </Card>
+  <Card title="Organized Storage" icon="folder">
+    Use consistent naming and folder structure
+  </Card>
+  <Card title="Secure Sharing" icon="lock">
+    Always use password protection for sensitive data
+  </Card>
+  <Card title="Format Selection" icon="file">
+    Choose formats compatible with your workflow
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Cloud Integrations" icon="cloud" href="/automation-integration/tool-integrations">
+    Set up automatic cloud storage
+  </Card>
+  <Card title="API Access" icon="code" href="/api-reference/introduction">
+    Access data programmatically
+  </Card>
+</CardGroup>

@@ -1,0 +1,403 @@
+---
+title: 'Email Notification Settings'
+description: 'Configure who receives meeting summaries and how'
+icon: 'envelope-open-text'
+---
+
+# Email Notification Settings
+
+Control how and when meeting summaries are sent to participants and team members.
+
+## Overview
+
+Email notifications keep everyone informed about meeting outcomes. This guide shows you how to configure who receives emails and what they contain.
+
+## Global Email Settings
+
+### Access Email Settings
+
+1. **Navigate to Settings**
+2. **Select "Notifications"**
+3. **Click "Email Settings" tab**
+
+### Enable/Disable All Emails
+
+Toggle email notifications on or off globally:
+
+1. **Settings → Notifications → Email Settings**
+2. **Master Switch**: "Send Email Summaries"
+   - **ON**: Emails sent based on rules below
+   - **OFF**: No emails sent (data still saved in dashboard)
+3. **Save changes**
+
+<Warning>
+  Turning off emails globally affects ALL meetings, including scheduled ones.
+</Warning>
+
+## Recipient Configuration
+
+### Default Recipients
+
+Set who receives emails by default:
+
+<Tabs>
+  <Tab title="All Participants">
+    **Send to everyone in the meeting**
+    
+    Includes:
+    - Meeting organizer
+    - All invited participants
+    - Anyone who joined the call
+    
+    Best for: Regular team meetings, collaborative sessions
+  </Tab>
+  
+  <Tab title="Organizer Only">
+    **Send only to meeting host**
+    
+    Includes:
+    - Person who scheduled the meeting
+    
+    Best for: Executive meetings, sensitive discussions
+  </Tab>
+  
+  <Tab title="Active Participants">
+    **Send to those who attended**
+    
+    Includes:
+    - Meeting organizer
+    - Participants who actually joined
+    - Excludes those who didn't show up
+    
+    Best for: Large meetings with optional attendance
+  </Tab>
+  
+  <Tab title="Custom List">
+    **Send to specific emails**
+    
+    Manually specify:
+    - Individual email addresses
+    - Distribution lists
+    - Workspace groups
+    
+    Best for: Executive summaries, stakeholder updates
+  </Tab>
+</Tabs>
+
+### Configuration Steps
+
+1. **Settings → Notifications → Email Recipients**
+2. **Select default behavior** (choose one above)
+3. **Add custom recipients** (optional):
+   - Enter email addresses
+   - Select workspace groups
+   - Add distribution lists
+4. **Exclude specific people** (optional)
+5. **Save settings**
+
+## Per-Meeting Overrides
+
+### Override for Single Meeting
+
+When scheduling a meeting:
+
+1. **Create/edit meeting**
+2. **Expand "Notification Settings"**
+3. **Choose**:
+   - Use default settings
+   - Custom recipients for this meeting
+   - Don't send emails
+4. **If custom**: Add specific email addresses
+5. **Save meeting**
+
+### Quick Actions for Past Meetings
+
+Already had a meeting? Change who gets the summary:
+
+1. **Dashboard → Past Meetings**
+2. **Select meeting**
+3. **Click "Resend Summary"**
+4. **Choose recipients**
+5. **Send**
+
+## Email Content Customization
+
+### Email Template Selection
+
+Choose what information to include:
+
+<AccordionGroup>
+  <Accordion title="Executive Summary (Brief)">
+    **Includes**:
+    - Meeting title and duration
+    - Top 3 key points
+    - Critical action items
+    - Link to full details
+    
+    **Length**: ~200 words
+    
+    **Best for**: Busy executives, quick updates
+  </Accordion>
+  
+  <Accordion title="Standard Summary">
+    **Includes**:
+    - Meeting overview
+    - All key discussion points
+    - Action items with owners
+    - Decisions made
+    - Links to recording and transcript
+    
+    **Length**: ~500 words
+    
+    **Best for**: Regular meetings, team updates
+  </Accordion>
+  
+  <Accordion title="Detailed Report">
+    **Includes**:
+    - Everything in Standard
+    - Speaker breakdown
+    - Timestamps
+    - Questions and answers
+    - Sentiment analysis
+    - Related documents
+    
+    **Length**: ~1000+ words
+    
+    **Best for**: Important meetings, compliance records
+  </Accordion>
+  
+  <Accordion title="Action Items Only">
+    **Includes**:
+    - Task list
+    - Assignees
+    - Due dates
+    - Priority levels
+    - Link to full meeting
+    
+    **Length**: ~100 words
+    
+    **Best for**: Task-focused meetings, stand-ups
+  </Accordion>
+</AccordionGroup>
+
+### Template Configuration
+
+1. **Settings → Templates → Email Templates**
+2. **Select template** from dropdown
+3. **Customize sections**:
+   - Include/exclude specific sections
+   - Reorder content blocks
+   - Add custom header/footer
+4. **Preview template**
+5. **Save as default** or create new variant
+
+## Email Timing
+
+### Delivery Schedule
+
+Control when emails are sent:
+
+```yaml
+Timing Options:
+  Immediate:
+    - Sends as soon as processing completes
+    - Usually 5-15 minutes after meeting
+    
+  Delayed:
+    - Wait 30/60/120 minutes after meeting
+    - Allows for manual review before sending
+    
+  Scheduled:
+    - Send at specific time daily (e.g., 5 PM)
+    - All meetings bundled if multiple
+    
+  Daily Digest:
+    - Once per day summary
+    - All meetings in single email
+    - Choose time: Morning/Afternoon/Evening
+```
+
+### Configuration
+
+1. **Settings → Notifications → Email Timing**
+2. **Select delivery option**
+3. **If scheduled**: Choose time and timezone
+4. **Configure digest settings** (if applicable)
+5. **Save preferences**
+
+## Advanced Settings
+
+### Conditional Email Rules
+
+Create rules for automatic email behavior:
+
+1. **Settings → Notifications → Email Rules**
+2. **Click "Add Rule"**
+3. **Define conditions**:
+   ```yaml
+   If meeting duration > 60 minutes
+     Then: Send detailed summary
+   
+   If participants < 3
+     Then: Send to organizer only
+   
+   If title contains "Executive"
+     Then: Send brief summary to custom list
+   ```
+4. **Set action** for each rule
+5. **Save rules**
+
+### Email Suppression
+
+Prevent emails for certain meeting types:
+
+1. **Settings → Notifications → Suppression Rules**
+2. **Add suppression pattern**:
+   - Meetings with keyword: "Personal", "Private"
+   - One-on-one meetings
+   - Meetings shorter than X minutes
+   - Specific recurring meetings
+3. **Save suppression rules**
+
+## Workspace-Level Settings
+
+### For Workspace Admins
+
+Control email settings for entire workspace:
+
+1. **Workspace Settings → Notifications**
+2. **Configure workspace defaults**:
+   - Require emails for all meetings
+   - Block emails for all meetings
+   - Allow individual choice (recommended)
+3. **Set recipient restrictions**:
+   - Internal team members only
+   - Allow external recipients
+   - Require approval for external sends
+4. **Save workspace policy**
+
+### Team Member Options
+
+If workspace allows individual settings:
+
+1. **Personal Settings → Notifications**
+2. **Your email preferences**:
+   - Receive all workspace meeting emails
+   - Only meetings you attend
+   - Only meetings you organize
+   - Never receive emails
+3. **Save personal preferences**
+
+## Unsubscribe Options
+
+### Individual Unsubscribe
+
+Each email contains an unsubscribe link:
+
+1. **Open any summary email**
+2. **Scroll to bottom**
+3. **Click "Unsubscribe from meeting summaries"**
+4. **Choose scope**:
+   - This meeting series only
+   - All meetings from this workspace
+   - All meeting emails
+5. **Confirm**
+
+### Re-subscribe
+
+Changed your mind?
+
+1. **Settings → Notifications**
+2. **Email Subscriptions**
+3. **Review unsubscribed categories**
+4. **Click "Re-subscribe"** next to any category
+5. **Save changes**
+
+## Email Formatting
+
+### Branding
+
+Customize email appearance:
+
+1. **Settings → Branding → Email Appearance**
+2. **Upload company logo**
+3. **Choose colors**:
+   - Header color
+   - Accent color
+   - Text color
+4. **Add footer text**
+5. **Preview and save**
+
+### Language
+
+Set email language:
+
+1. **Settings → Notifications → Language**
+2. **Select language** for email content
+3. **Note**: Transcript remains in original language
+4. **Summary translated** if different from meeting language
+5. **Save preference**
+
+## Testing Email Configuration
+
+### Send Test Email
+
+Before applying to all meetings:
+
+1. **Settings → Notifications → Email Settings**
+2. **Click "Send Test Email"**
+3. **Choose template** to test
+4. **Enter recipient** (your email)
+5. **Send test**
+6. **Review and adjust** as needed
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Emails going to spam">
+    **Solutions**:
+    - Add sender to safe senders list
+    - Check with IT department about allowlisting
+    - Verify email authentication (DMARC/SPF)
+    - Consider using workspace domain for sending
+  </Accordion>
+  
+  <Accordion title="Wrong people receiving emails">
+    **Check**:
+    - Default recipient settings
+    - Per-meeting overrides
+    - Workspace-level policies
+    - Calendar participation list
+    
+    **Fix**: Update settings and use "Resend" for past meetings
+  </Accordion>
+  
+  <Accordion title="Emails delayed or not arriving">
+    **Verify**:
+    - Email timing settings (not set to digest/scheduled)
+    - Recipient email addresses are correct
+    - Email sending is enabled globally
+    - No suppression rules blocking emails
+    
+    **Alternative**: Access from dashboard immediately
+  </Accordion>
+  
+  <Accordion title="Can't turn off emails for workspace">
+    **Possible reasons**:
+    - Workspace admin has enforced email policy
+    - Compliance requirements mandate email records
+    
+    **Contact**: Workspace administrator for exception
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Review Meeting Summaries" icon="file-lines" href="/meeting-process/review-summary">
+    Learn how to access and use summaries in the dashboard
+  </Card>
+  <Card title="Template Customization" icon="pen-to-square" href="/design/meeting-templates">
+    Customize meeting summary templates
+  </Card>
+</CardGroup>

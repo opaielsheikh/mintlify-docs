@@ -1,0 +1,164 @@
+---
+title: 'Getting the Agent to Join Calls'
+description: 'Learn how to add the AI agent to your video calls'
+icon: 'phone-plus'
+---
+
+# Getting the AI Agent to Join Calls
+
+There are multiple ways to get the AI meeting assistant to join your video calls.
+
+## Quick Start
+
+The AI agent can join calls on popular platforms:
+
+<CardGroup cols={3}>
+  <Card title="Zoom" icon="video">
+    Full support
+  </Card>
+  <Card title="Google Meet" icon="google">
+    Full support
+  </Card>
+  <Card title="Microsoft Teams" icon="microsoft">
+    Full support
+  </Card>
+</CardGroup>
+
+## Method 1: Automatic Join (Calendar Integration)
+
+If you've connected your calendar, the agent can automatically join scheduled meetings.
+
+### Requirements
+- Calendar integration must be enabled
+- Auto-join settings must be configured
+- Meeting must contain a valid meeting link
+
+### How It Works
+1. The AI scans your connected calendar
+2. Detects upcoming meetings with video call links
+3. Joins automatically at the scheduled time (or a few minutes before)
+4. Announces its presence when joining
+
+<Note>
+  Configure auto-join preferences in **Settings → Calendar Integration → Auto-Join Rules**
+</Note>
+
+## Method 2: Manual Invitation
+
+You can manually invite the AI agent to any meeting.
+
+### Adding via Email
+
+Most meeting platforms allow you to add participants by email:
+
+1. **Create or edit your meeting**
+2. **Add the AI agent's email as a participant**:
+   ```
+   meeting-bot@yourdomain.ai
+   ```
+3. **Send the meeting invitation**
+4. The agent will automatically join at the scheduled time
+
+### Adding via Meeting Link
+
+For ad-hoc or instant meetings:
+
+1. **Copy your meeting link**
+2. **Go to your dashboard**
+3. **Click "Add Agent to Meeting"**
+4. **Paste the meeting link**
+5. **Click "Join Now" or "Schedule Join"**
+
+## Method 3: Quick Join Button
+
+For instant meetings without calendar integration:
+
+### Desktop App
+1. Start or join your video call
+2. Open the AI assistant dashboard or extension
+3. Click "Join Current Meeting"
+4. The agent will join within seconds
+
+### Browser Extension
+1. Install our browser extension
+2. Join a video call in your browser
+3. Click the extension icon
+4. Select "Add AI Agent to This Call"
+
+## Method 4: Slack/Teams Command
+
+If you use Slack or Microsoft Teams:
+
+### Slack Command
+```
+/meetingbot join [meeting-link]
+```
+
+### Teams Command
+```
+@MeetingBot join this meeting
+```
+
+## Platform-Specific Instructions
+
+<AccordionGroup>
+  <Accordion title="Zoom Meetings">
+    **Option 1**: Add bot email as a participant when scheduling
+    
+    **Option 2**: Use the Zoom bot command in-meeting:
+    - Open chat during the meeting
+    - Invite the AI bot using its Zoom contact
+    
+    **Option 3**: Enable auto-join for all Zoom meetings in settings
+  </Accordion>
+  
+  <Accordion title="Google Meet">
+    **Option 1**: Add bot to Google Calendar event
+    
+    **Option 2**: Share meeting link with the bot via dashboard
+    
+    **Option 3**: The bot auto-joins if calendar integration is enabled
+    
+    **Note**: Ensure your Google Workspace allows external participants
+  </Accordion>
+  
+  <Accordion title="Microsoft Teams">
+    **Option 1**: Add bot as a meeting participant in Teams calendar
+    
+    **Option 2**: Use @mention command in Teams chat
+    
+    **Option 3**: Configure auto-join for Teams meetings
+    
+    **Note**: May require admin approval for first-time setup
+  </Accordion>
+</AccordionGroup>
+
+## Verification
+
+Once the agent joins, you'll see:
+
+- ✅ A notification that the AI agent has joined
+- ✅ The agent listed as a participant
+- ✅ A visual indicator showing it's recording/transcribing
+- ✅ Real-time status in your dashboard
+
+## Troubleshooting
+
+<Warning>
+  If the agent fails to join, check these common issues:
+  - Meeting link is valid and not expired
+  - Meeting hasn't started yet (agent joins 1-2 minutes after start)
+  - Your organization's security settings allow bot participants
+  - You have sufficient meeting credits in your subscription
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Schedule Agent for Future Meetings" icon="calendar-check" href="/meeting-setup/schedule-agent">
+    Set up automatic joining for upcoming meetings
+  </Card>
+  <Card title="Remove Agent from Call" icon="phone-slash" href="/meeting-setup/remove-agent">
+    Learn how to remove the agent if needed
+  </Card>
+</CardGroup>

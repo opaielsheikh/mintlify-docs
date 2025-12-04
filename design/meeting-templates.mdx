@@ -1,0 +1,398 @@
+---
+title: 'Meeting Templates'
+description: 'Customize meeting summaries with templates'
+icon: 'palette'
+---
+
+# Meeting Templates
+
+Create and customize templates to control how your meeting summaries are formatted and what information is highlighted.
+
+## What Are Meeting Templates?
+
+Templates define:
+- Structure of meeting summaries
+- Which sections to include/exclude
+- How information is presented
+- Email format and content
+- Action item formatting
+
+## Pre-built Templates
+
+Choose from ready-made templates:
+
+<CardGroup cols={2}>
+  <Card title="Executive Summary" icon="briefcase">
+    Brief, high-level overview for busy executives
+  </Card>
+  <Card title="Detailed Report" icon="file-alt">
+    Comprehensive summary with all details
+  </Card>
+  <Card title="Action Items Focus" icon="list-check">
+    Emphasizes tasks and next steps
+  </Card>
+  <Card title="Sales Call" icon="handshake">
+    Optimized for sales conversations
+  </Card>
+  <Card title="Technical Review" icon="code">
+    Structured for engineering meetings
+  </Card>
+  <Card title="Client Meeting" icon="users">
+    Professional format for client interactions
+  </Card>
+</CardGroup>
+
+## Accessing Templates
+
+### View Available Templates
+
+<Steps>
+  <Step title="Navigate to Templates">
+    Go to **Settings → Templates** in your dashboard to access the template library.
+    <img src="/assets/Meeting-Templates/1.png" alt="Templates Overview" />
+  </Step>
+  <Step title="Browse and Select Template">
+    Browse the available templates, preview them to see examples, and select your preferred default template.
+    <img src="/assets/Meeting-Templates/2.png" alt="Select Template" />
+  </Step>
+</Steps>
+
+All new meetings will use your selected default template unless overridden.
+
+## Creating Custom Templates
+
+### Template Builder
+
+Build templates from scratch:
+
+1. **Settings → Templates → Create New**
+2. **Name your template**
+3. **Choose base structure** or start blank
+4. **Add/remove sections**
+5. **Configure each section**
+6. **Preview and save**
+
+### Sections You Can Include
+
+<Tabs>
+  <Tab title="Summary Sections">
+    - **Meeting Overview**: Title, date, participants
+    - **Executive Summary**: Brief overview
+    - **Key Topics**: Main discussion points
+    - **Decisions Made**: Conclusions reached
+    - **Action Items**: Tasks with owners
+    - **Next Steps**: Follow-up actions
+    - **Questions Raised**: Unresolved questions
+    - **Important Quotes**: Notable statements
+  </Tab>
+  
+  <Tab title="Analytics Sections">
+    - **Talk Time Analysis**: Speaking distribution
+    - **Topic Breakdown**: Time per topic
+    - **Sentiment Analysis**: Meeting mood
+    - **Engagement Metrics**: Participation stats
+    - **Key Moments**: Highlights timeline
+  </Tab>
+  
+  <Tab title="Technical Sections">
+    - **Transcript Excerpts**: Selected quotes
+    - **Technical Details**: Specs discussed
+    - **Code Snippets**: Any code mentioned
+    - **Links & Resources**: Shared materials
+    - **Diagrams & Visuals**: Screenshots
+  </Tab>
+  
+  <Tab title="Custom Sections">
+    - **Custom Fields**: Add any field
+    - **Conditional Sections**: Show if criteria met
+    - **Dynamic Content**: AI-generated based on meeting
+    - **Embedded Media**: Images, videos
+  </Tab>
+</Tabs>
+
+### Section Configuration
+
+For each section, configure:
+
+```yaml
+Section Settings:
+  Display Name: "Action Items"
+  Order: 3
+  Always Show: true / false
+  AI Prompt: "Extract all tasks with owners and deadlines"
+  Format: List / Paragraph / Table
+  Max Length: 500 words
+  Include in Email: Yes / No / Summary Only
+```
+
+## Template Examples
+
+### Executive Summary Template
+
+```markdown
+# Meeting: [Title]
+**Date**: [Date] | **Duration**: [Duration]
+
+## Key Outcomes
+[AI-generated 2-3 sentence summary]
+
+## Critical Decisions
+1. [Decision 1]
+2. [Decision 2]
+
+## Your Action Items
+- [ ] [Task 1] - Due: [Date]
+- [ ] [Task 2] - Due: [Date]
+
+[Link to Full Details]
+```
+
+### Sales Call Template
+
+```markdown
+# Sales Call: [Prospect Name]
+**Date**: [Date] | **Stage**: [Pipeline Stage]
+
+## Prospect Needs
+- [Need 1]
+- [Need 2]
+
+## Pain Points Identified
+- [Pain 1]
+- [Pain 2]
+
+## Next Steps
+1. [Action 1] - Owner: [Name]
+2. [Action 2] - Owner: [Name]
+
+## Decision Criteria
+[Key factors for prospect's decision]
+
+## Follow-up Date
+[Scheduled next meeting]
+```
+
+### Technical Review Template
+
+```markdown
+# Technical Review: [Component Name]
+**Reviewer**: [Name] | **Date**: [Date]
+
+## Technical Decisions
+[List of architecture/technical decisions]
+
+## Issues Identified
+| Priority | Issue | Owner | Deadline |
+|----------|-------|-------|----------|
+| High     | [Issue] | [Name] | [Date] |
+
+## Code Review Items
+- [Item 1]
+- [Item 2]
+
+## Performance Considerations
+[Performance discussion summary]
+
+## Security Notes
+[Security-related points]
+```
+
+## Using Templates
+
+### Apply Template to Meeting
+
+#### When Scheduling
+
+1. **Create new meeting**
+2. **Expand "Advanced Options"**
+3. **Select "Template"**
+4. **Choose from dropdown**
+5. **Save meeting**
+
+#### For Existing Meeting
+
+1. **Open past meeting**
+2. **Click "Regenerate Summary"**
+3. **Choose different template**
+4. **Click "Apply Template"**
+
+### Template Override
+
+Use different template for specific meeting:
+
+1. **During meeting creation/edit**
+2. **"Template" dropdown**
+3. **Select override template**
+4. **This meeting only** uses selected template
+
+## Advanced Customization
+
+### Conditional Logic
+
+Show sections based on conditions:
+
+```yaml
+Example Rules:
+  Show "Budget Discussion" section:
+    - If "budget" mentioned in meeting
+  
+  Show "Technical Details" section:
+    - If meeting duration > 45 minutes
+    - And participants include engineers
+  
+  Show "Client Concerns" section:
+    - If sentiment analysis shows concerns
+```
+
+### AI-Powered Fields
+
+Create smart fields that use AI:
+
+1. **Template Editor → Add Field**
+2. **Choose "AI-Generated Field"**
+3. **Write AI prompt**:
+   ```
+   "Identify the top 3 concerns raised and 
+   suggest solutions for each"
+   ```
+4. **Set display format**
+5. **Save field**
+
+### Multi-Language Templates
+
+Create templates in different languages:
+
+1. **Template Editor → Language**
+2. **Add language version**
+3. **Translate section names**
+4. **Adjust formatting for language**
+5. **Save language variant**
+
+## Template Management
+
+### Organize Templates
+
+Create categories:
+
+1. **Settings → Templates → Organize**
+2. **Create folders**:
+   - By team (Sales, Engineering, HR)
+   - By type (External, Internal)
+   - By detail level (Brief, Standard, Detailed)
+3. **Drag templates** to folders
+
+### Sharing Templates
+
+#### Within Workspace
+
+1. **Template → Share**
+2. **Choose "Share with Workspace"**
+3. **Set permissions**:
+   - View only
+   - Can use
+   - Can edit
+4. **Share**
+
+#### Export Template
+
+1. **Template → Export**
+2. **Format**: JSON or YAML
+3. **Download template file**
+4. **Share file** with others
+
+#### Import Template
+
+1. **Settings → Templates → Import**
+2. **Upload template file**
+3. **Review and adjust**
+4. **Save to library**
+
+### Version Control
+
+Track template changes:
+
+1. **Template → Version History**
+2. **View all versions**
+3. **Preview version**
+4. **Restore** previous version if needed
+5. **Compare versions** side-by-side
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Start Simple" icon="seedling">
+    Begin with pre-built template and customize gradually
+  </Card>
+  <Card title="Test First" icon="flask">
+    Try template with test meeting before using in production
+  </Card>
+  <Card title="Get Feedback" icon="comments">
+    Share draft templates with team for input
+  </Card>
+  <Card title="Iterate" icon="rotate">
+    Continuously improve based on usage
+  </Card>
+</CardGroup>
+
+## Template Gallery
+
+Browse community templates:
+
+1. **Settings → Templates → Gallery**
+2. **Filter by**:
+   - Industry
+   - Meeting type
+   - Popularity
+   - Rating
+3. **Preview template**
+4. **Install to your library**
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Template not applying correctly">
+    **Check**:
+    - Template is saved and published
+    - No conflicting templates set
+    - Meeting has sufficient data for template
+    
+    **Try**: Regenerate summary with template
+  </Accordion>
+  
+  <Accordion title="Missing sections in output">
+    **Possible causes**:
+    - Section set to conditional display
+    - Not enough relevant content in meeting
+    - Section disabled in email version
+    
+    **Fix**: Review section settings and conditions
+  </Accordion>
+  
+  <Accordion title="AI fields not generating">
+    **Verify**:
+    - AI prompt is clear and specific
+    - Meeting has relevant content
+    - Field is enabled
+    
+    **Solution**: Revise AI prompt for better results
+  </Accordion>
+  
+  <Accordion title="Can't edit shared template">
+    **Reason**: You have view-only permission
+    
+    **Options**:
+    - Request edit access from owner
+    - Duplicate template to create your own version
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Email Settings" icon="envelope" href="/meeting-process/email-settings">
+    Configure email delivery for templates
+  </Card>
+  <Card title="Automation" icon="bolt" href="/automation-integration/tool-integrations">
+    Automate template application with integrations
+  </Card>
+</CardGroup>

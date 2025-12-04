@@ -1,0 +1,525 @@
+---
+title: 'Tool Integrations'
+description: 'Connect with your favorite tools and automatically send meeting data'
+icon: 'plug'
+---
+
+# Tool Integrations
+
+Connect the AI meeting assistant with your existing tools to automate workflows and centralize information.
+
+## Available Integrations
+
+### Video Platforms
+
+<CardGroup cols={3}>
+  <Card title="Zoom" icon="video">
+    Video calls (Auto-connected)
+  </Card>
+  <Card title="Microsoft Teams" icon="microsoft">
+    Video calls (Auto-connected)
+  </Card>
+  <Card title="Webex" icon="video">
+    Video calls (Auto-connected)
+  </Card>
+</CardGroup>
+
+### Communication & Notes
+
+<CardGroup cols={3}>
+  <Card title="Slack" icon="slack">
+    Send notes to Slack (Beta)
+  </Card>
+  <Card title="Notion" icon="book">
+    Update Notion
+  </Card>
+  <Card title="Gmail" icon="envelope">
+    Sync with Gmail (Auto)
+  </Card>
+  <Card title="Confluence" icon="file-lines">
+    Sync with Confluence
+  </Card>
+</CardGroup>
+
+### CRM Integrations
+
+<CardGroup cols={3}>
+  <Card title="HubSpot" icon="hubspot">
+    Update HubSpot
+  </Card>
+  <Card title="Salesforce" icon="cloud">
+    Update Salesforce
+  </Card>
+  <Card title="Affinity" icon="address-book">
+    Sync with Affinity CRM
+  </Card>
+  <Card title="Close" icon="phone">
+    Sync with Close CRM
+  </Card>
+  <Card title="Copper" icon="database">
+    Sync with Copper CRM
+  </Card>
+  <Card title="Freshsales" icon="chart-line">
+    Sync with Freshsales CRM
+  </Card>
+</CardGroup>
+
+### Project & Task Management
+
+<CardGroup cols={3}>
+  <Card title="Asana" icon="list-check">
+    Sync with Asana
+  </Card>
+  <Card title="Monday.com" icon="table-columns">
+    Create items (Beta)
+  </Card>
+  <Card title="Linear" icon="code-branch">
+    Create issues in Linear
+  </Card>
+  <Card title="Jira" icon="jira">
+    Create issues in Jira
+  </Card>
+  <Card title="ClickUp" icon="square-check">
+    Create tasks in ClickUp
+  </Card>
+  <Card title="Trello" icon="table-list">
+    Create cards in Trello
+  </Card>
+</CardGroup>
+
+### Storage & Database
+
+<CardGroup cols={3}>
+  <Card title="Airtable" icon="table">
+    Sync with Airtable
+  </Card>
+  <Card title="Dropbox" icon="dropbox">
+    Sync with Dropbox (Beta)
+  </Card>
+  <Card title="Greenhouse" icon="seedling">
+    Sync with Greenhouse ATS
+  </Card>
+</CardGroup>
+
+## Setting Up Integrations
+
+### General Setup Process
+
+<Steps>
+  <Step title="Navigate to Integrations">
+    Go to **Settings → Integrations** and browse the available tools you can connect.
+    <img src="/assets/tool-integration/1.png" alt="Integrations Overview" />
+  </Step>
+  <Step title="Connect Your Tool">
+    Click "Connect" on your desired integration and authenticate with your account.
+    <img src="/assets/tool-integration/2.png" alt="Connect Integration" />
+  </Step>
+  <Step title="Configure & Enable">
+    Configure the integration settings and test the connection before enabling.
+    <img src="/assets/tool-integration/3.png" alt="Configure Integration" />
+  </Step>
+</Steps>
+
+## Popular Integrations
+
+### Slack Integration
+
+Send meeting summaries to Slack channels:
+
+#### Setup
+
+1. **Settings → Integrations → Slack**
+2. **Click "Connect to Slack"**
+3. **Authorize** the app in your workspace
+4. **Choose default channel** for summaries
+
+#### Configuration
+
+```yaml
+Slack Settings:
+  Default Channel: #meetings
+  Notification Format: Summary card with link
+  Post When: Immediately after processing
+  Include: Summary + Action Items
+  Mention: @channel / @here / None
+  Thread Replies: Enable for discussions
+```
+
+#### Usage
+
+After each meeting:
+- Summary automatically posted
+- Action items tagged to assignees
+- Link to full transcript
+- Recording embedded (if enabled)
+
+### Salesforce Integration
+
+<Tabs>
+  <Tab title="Setup">
+    1. Connect Salesforce account
+    2. Map meeting fields to Salesforce objects
+    3. Choose which meetings to sync:
+       - All meetings
+       - Meetings with external participants
+       - Meetings tagged as "Sales"
+    4. Configure sync frequency
+  </Tab>
+  
+  <Tab title="Features">
+    - Automatically log calls to Opportunities
+    - Create tasks from action items
+    - Update contact records
+    - Track deal progression
+    - Add to activity timeline
+  </Tab>
+  
+  <Tab title="Field Mapping">
+    ```yaml
+    Meeting → Salesforce:
+      Meeting Title → Subject
+      Summary → Description
+      Participants → Related Contacts
+      Action Items → Tasks
+      Recording Link → Attachment
+      Sentiment → Custom Field
+    ```
+  </Tab>
+</Tabs>
+
+### HubSpot Integration
+
+Track sales calls in HubSpot CRM:
+
+#### Features
+- Log calls to contacts automatically
+- Create deals from qualified conversations
+- Update deal stages based on call outcomes
+- Track email sequences effectiveness
+- Generate activity reports
+
+#### Configuration
+
+1. **Connect HubSpot account**
+2. **Map contacts** by email
+3. **Set auto-logging rules**:
+   ```yaml
+   Log to HubSpot if:
+     - External participant detected
+     - Meeting duration > 15 minutes
+     - Tagged as "Sales" or "Client"
+   ```
+4. **Configure data sync**:
+   - Call duration
+   - Call notes (summary)
+   - Call outcome
+   - Next steps
+   - Recording link
+
+### Asana Integration
+
+Turn action items into Asana tasks:
+
+#### Setup
+1. **Settings → Integrations → Asana**
+2. **Connect Asana account**
+3. **Select workspace**
+4. **Choose default project**
+
+#### Automatic Task Creation
+
+After meetings:
+- ✅ Action items become Asana tasks
+- ✅ Assignees auto-assigned
+- ✅ Due dates populated
+- ✅ Task description includes context
+- ✅ Linked to meeting transcript
+
+<Info>
+  Tasks include a backlink to the meeting for full context.
+</Info>
+
+### Notion Integration
+
+Save meetings to Notion workspace:
+
+#### Options
+
+<AccordionGroup>
+  <Accordion title="Database Sync">
+    **Create meetings database**:
+    - Each meeting = new page
+    - Properties: Date, Participants, Duration, Topics
+    - Includes: Transcript, Summary, Action Items
+    - Automatic categorization
+  </Accordion>
+  
+  <Accordion title="Page Creation">
+    **Add to existing pages**:
+    - Append to daily notes
+    - Add to project pages
+    - Update team wiki
+    - Create in specific database
+  </Accordion>
+  
+  <Accordion title="Template Usage">
+    **Use Notion templates**:
+    - Meeting notes template
+    - Project update template
+    - Sales call template
+    - Custom templates
+  </Accordion>
+</AccordionGroup>
+
+### Google Drive Integration
+
+Store recordings and transcripts:
+
+#### Setup
+1. **Connect Google Drive**
+2. **Choose destination folder**
+3. **Configure file organization**:
+   ```
+   /Meetings
+     /2024
+       /December
+         /Meeting Title - Dec 2, 2024
+           - recording.mp4
+           - transcript.pdf
+           - summary.pdf
+   ```
+4. **Set permissions**
+5. **Enable auto-upload**
+
+#### File Types Uploaded
+- Video recordings (MP4)
+- Audio files (MP3)
+- Transcripts (PDF, DOCX)
+- Summaries (PDF)
+- Action items (CSV)
+
+## Advanced Integration Features
+
+### Zapier Integration
+
+Connect to 5000+ apps:
+
+1. **Settings → Integrations → Zapier**
+2. **Get API key**
+3. **Create Zap in Zapier**:
+   - Trigger: New Meeting Completed
+   - Actions: Your choice
+4. **Popular Zaps**:
+   - Meeting summary → Gmail
+   - Action items → Todoist
+   - Recording → Dropbox
+   - Highlights → Evernote
+
+### Webhook Integration
+
+For custom integrations:
+
+```javascript
+// Webhook payload example
+{
+  "event": "meeting.completed",
+  "meeting_id": "mtg_123456",
+  "title": "Product Review",
+  "date": "2024-12-02T15:00:00Z",
+  "duration": 3600,
+  "participants": ["user@example.com"],
+  "summary": "Full summary text...",
+  "action_items": [
+    {
+      "task": "Review designs",
+      "assignee": "user@example.com",
+      "due_date": "2024-12-09"
+    }
+  ],
+  "transcript_url": "https://...",
+  "recording_url": "https://..."
+}
+```
+
+#### Setup Webhook
+
+1. **Settings → Integrations → Webhooks**
+2. **Add webhook URL**
+3. **Choose events**:
+   - meeting.completed
+   - meeting.started
+   - action_item.created
+   - transcript.ready
+4. **Add authentication** (optional)
+5. **Test webhook**
+6. **Enable**
+
+## Integration Settings
+
+### Conditional Integration
+
+Send data only when conditions are met:
+
+```yaml
+Integration Rules:
+  Send to Salesforce:
+    - If participant domain is external
+    - And meeting duration > 20 minutes
+  
+  Post to Slack:
+    - If meeting has action items
+    - Or meeting agenda contains "standup"
+  
+  Create Asana tasks:
+    - If action items exist
+    - And assignee is workspace member
+```
+
+### Data Filtering
+
+Choose what data to send:
+
+<Tabs>
+  <Tab title="Full Data">
+    - Complete transcript
+    - Full recording
+    - All metadata
+    - Participant details
+    - Complete summary
+  </Tab>
+  
+  <Tab title="Summary Only">
+    - Key points
+    - Action items
+    - Decisions
+    - Links to full content
+  </Tab>
+  
+  <Tab title="Custom Selection">
+    Choose specific fields:
+    - ☑ Meeting title
+    - ☑ Summary
+    - ☑ Action items
+    - ☐ Transcript
+    - ☐ Recording
+    - ☑ Participants
+  </Tab>
+</Tabs>
+
+## Managing Integrations
+
+### View Connected Integrations
+
+1. **Settings → Integrations**
+2. **"Connected" tab**
+3. **See all active integrations**
+4. **View sync status**
+
+### Edit Integration
+
+1. **Click on integration**
+2. **Modify settings**:
+   - Change default destination
+   - Update sync rules
+   - Adjust data mapping
+3. **Save changes**
+
+### Disable Integration
+
+Temporarily stop syncing:
+
+1. **Integration Settings**
+2. **Toggle "Enabled" to OFF**
+3. **Integration paused** (can re-enable anytime)
+
+### Disconnect Integration
+
+Completely remove:
+
+1. **Integration Settings**
+2. **Click "Disconnect"**
+3. **Confirm disconnection**
+4. **Revoke access** in the integrated tool
+
+## Security & Permissions
+
+### Data Privacy
+
+<Warning>
+  Be mindful of:
+  - Sensitive meeting content
+  - External participants
+  - Confidential information
+  - Compliance requirements
+</Warning>
+
+### Permission Management
+
+Control access:
+
+1. **Integration → Permissions**
+2. **Set data access level**:
+   - Read only
+   - Write & create
+   - Full access
+3. **Limit to specific meetings**
+4. **Set user restrictions**
+
+### Audit Log
+
+Track integration activity:
+
+1. **Settings → Integrations → Audit Log**
+2. **View all integration events**:
+   - Data sent
+   - Failed syncs
+   - Permission changes
+   - User actions
+3. **Export log** for compliance
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Integration not syncing">
+    **Check**:
+    - Integration is enabled
+    - Authentication is valid
+    - Sync rules are not blocking
+    - Destination exists (channel, folder, etc.)
+    
+    **Try**: Disconnect and reconnect
+  </Accordion>
+  
+  <Accordion title="Missing data in integrated tool">
+    **Verify**:
+    - Data filtering settings
+    - Field mapping is correct
+    - Target tool accepts data format
+    
+    **Solution**: Review integration settings
+  </Accordion>
+  
+  <Accordion title="Authentication expired">
+    **Fix**:
+    - Re-authenticate in Settings
+    - Grant necessary permissions
+    - Check token expiration
+  </Accordion>
+  
+  <Accordion title="Duplicate entries created">
+    **Cause**: Multiple sync rules or integrations
+    
+    **Solution**: Review integration rules, disable duplicates
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Export Data" icon="download" href="/automation-integration/export-data">
+    Learn about manual data export options
+  </Card>
+  <Card title="API Documentation" icon="code" href="/api-reference/introduction">
+    Build custom integrations
+  </Card>
+</CardGroup>

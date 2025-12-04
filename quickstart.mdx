@@ -1,80 +1,283 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: 'Quick Start Guide'
+description: 'Get your first AI-assisted meeting up and running in 10 minutes'
+icon: 'rocket'
 ---
 
-## Get started in three steps
+# Quick Start Guide
 
-Get your documentation site running locally and make your first customization.
+Get started with AI Meeting Assistant in just a few steps and have your first meeting recorded and summarized.
 
-### Step 1: Set up your local environment
+## Overview
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+This guide will walk you through:
+- Creating your account
+- Connecting your calendar
+- Scheduling your first AI-assisted meeting
+- Reviewing your meeting summary
 
-### Step 2: Deploy your changes
+<Info>
+  **Time to complete**: ~10 minutes
+  
+  **What you'll need**:
+  - Email address
+  - Access to your calendar (Google, Outlook, etc.)
+  - A video call platform account (Zoom, Meet, or Teams)
+</Info>
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+## Step 1: Create Your Account
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+<Steps>
+  <Step title="Sign Up">
+    1. Visit the sign-up page
+    2. Enter your email and create a password
+    3. Verify your email address
+    4. Complete the onboarding questionnaire
+  </Step>
+  
+  <Step title="Choose Your Plan">
+    Select a plan that fits your needs:
+    - **Free Trial**: 14 days, 5 meetings
+    - **Basic**: $15/month, 25 meetings
+    - **Pro**: $30/month, 100 meetings
+    - **Enterprise**: Unlimited meetings, advanced features
+  </Step>
+</Steps>
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
-
-### Step 3: Go live
-
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
-
-## Next steps
-
-Now that you have your docs running, explore these key features:
-
-<CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
+<Card title="Detailed Account Setup" icon="book" href="/account-setup/signup-onboarding">
+  For step-by-step account creation instructions, see our complete guide
 </Card>
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
+## Step 2: Connect Your Calendar
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
+Connecting your calendar enables automatic meeting detection and AI agent scheduling.
 
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
+### Google Calendar
 
-</CardGroup>
+1. **Navigate to Settings → Integrations**
+2. **Click "Connect Google Calendar"**
+3. **Sign in and authorize access**
+4. **Choose which calendars to sync**
+
+### Microsoft Outlook
+
+1. **Settings → Integrations → Microsoft Outlook**
+2. **Click "Connect Outlook"**
+3. **Sign in with Microsoft credentials**
+4. **Grant calendar permissions**
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  Calendar integration is optional but highly recommended for automatic scheduling.
 </Note>
+
+<Card title="Full Calendar Setup" icon="calendar" href="/account-setup/connect-calendar">
+  See detailed instructions for all calendar platforms
+</Card>
+
+## Step 3: Schedule Your First Meeting
+
+You have three options to get the AI agent into your meeting:
+
+<Tabs>
+  <Tab title="Automatic (Recommended)">
+    **If you connected your calendar**:
+    
+    1. Create a meeting in your calendar as usual
+    2. Add participants and video call link
+    3. The AI agent automatically detects and joins
+    4. No additional setup needed!
+    
+    ✅ Best for: Regular recurring meetings
+  </Tab>
+  
+  <Tab title="Manual Invitation">
+    **For any meeting**:
+    
+    1. Create your meeting in Zoom/Meet/Teams
+    2. Add `meeting-bot@yourdomain.ai` as a participant
+    3. Send the invitation
+    4. The agent joins at the scheduled time
+    
+    ✅ Best for: One-off meetings
+  </Tab>
+  
+  <Tab title="Via Dashboard">
+    **Schedule through the platform**:
+    
+    1. Dashboard → "Schedule New Meeting"
+    2. Enter meeting details (title, time, link)
+    3. Configure preferences (recording, template)
+    4. Click "Schedule"
+    
+    ✅ Best for: Full control over settings
+  </Tab>
+</Tabs>
+
+## Step 4: Join Your Meeting
+
+When it's time for your meeting:
+
+1. **Join the video call** as you normally would
+2. **The AI agent joins** within 1-2 minutes of meeting start
+3. **You'll see a notification** confirming the agent joined
+4. **The agent appears** in the participant list as "AI Meeting Assistant"
+
+<Info>
+  The AI bot is silent during the meeting - it only listens and records. Participants will be notified that the meeting is being recorded.
+</Info>
+
+### What the AI Records
+
+During your meeting, the AI captures:
+- 🎥 **Video recording** (optional, can be audio-only)
+- 📝 **Real-time transcription** with speaker labels
+- 🎯 **Key moments** and important quotes
+- ✅ **Action items** mentioned during discussion
+
+## Step 5: Review Your Summary
+
+After the meeting ends (usually within 5-15 minutes):
+
+1. **Receive email notification** with summary
+2. **Or access via Dashboard** → "Past Meetings"
+3. **Click on your meeting** to view full details
+
+### What You'll Get
+
+<CardGroup cols={2}>
+  <Card title="Meeting Summary" icon="file-alt">
+    - Key discussion points
+    - Decisions made
+    - Action items with owners
+    - Next steps
+  </Card>
+  <Card title="Full Transcript" icon="align-left">
+    - Verbatim text of conversation
+    - Speaker identification
+    - Timestamps for navigation
+    - Searchable content
+  </Card>
+  <Card title="Recording" icon="video">
+    - Full video/audio playback
+    - Smart chapters
+    - Jump to key moments
+    - Download options
+  </Card>
+  <Card title="AI Chatbot" icon="robot">
+    - Ask questions about the meeting
+    - Extract specific information
+    - Generate custom summaries
+    - Find action items
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+Congratulations! You've completed your first AI-assisted meeting. Here's what to explore next:
+
+<AccordionGroup>
+  <Accordion title="Customize Templates" icon="palette">
+    Create custom summary templates to match your workflow.
+    
+    [Learn about templates →](/design/meeting-templates)
+  </Accordion>
+  
+  <Accordion title="Set Up Integrations" icon="plug">
+    Connect Slack, Salesforce, Asana, and other tools to automate workflows.
+    
+    [Explore integrations →](/automation-integration/tool-integrations)
+  </Accordion>
+  
+  <Accordion title="Invite Your Team" icon="users">
+    Create a workspace and invite team members to collaborate on meetings.
+    
+    [Workspace setup →](/workspace-channels/workspace-management)
+  </Accordion>
+  
+  <Accordion title="Configure Auto-Join" icon="gear">
+    Fine-tune when the AI agent automatically joins meetings.
+    
+    [Meeting setup guide →](/meeting-setup/schedule-agent)
+  </Accordion>
+</AccordionGroup>
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="How much does it cost?">
+    - **Free Trial**: 14 days, up to 5 meetings
+    - **Basic**: $15/month for 25 meetings
+    - **Pro**: $30/month for 100 meetings
+    - **Enterprise**: Custom pricing for unlimited meetings
+    
+    [View pricing details →](/subscription/upgrade-trial)
+  </Accordion>
+  
+  <Accordion title="Which platforms are supported?">
+    We support all major video conferencing platforms:
+    - ✅ Zoom
+    - ✅ Google Meet
+    - ✅ Microsoft Teams
+    - ✅ Webex
+    - ✅ GoToMeeting
+    - ✅ And more
+  </Accordion>
+  
+  <Accordion title="Is my data secure?">
+    Yes! We're SOC 2 compliant with:
+    - End-to-end encryption
+    - Secure data storage
+    - GDPR compliance
+    - Regular security audits
+    - Granular access controls
+  </Accordion>
+  
+  <Accordion title="Can I cancel my subscription?">
+    Absolutely. Cancel anytime with no penalties. Your data remains accessible for 30 days after cancellation.
+    
+    [Cancellation guide →](/subscription/cancel-subscription)
+  </Accordion>
+  
+  <Accordion title="How do I remove the agent from a meeting?">
+    You can remove the AI agent at any time:
+    - From your dashboard (click "Remove Agent")
+    - Directly in the video call (remove participant)
+    - Via voice command (if enabled)
+    
+    [Removal guide →](/meeting-setup/remove-agent)
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+<Card title="Get Support" icon="headset">
+  We're here to help you succeed:
+  
+  - **Live Chat**: Click the chat icon in the bottom right (24/7)
+  - **Email**: support@yourdomain.ai
+  - **Documentation**: Browse our complete guides
+  - **Community**: Join our user forum
+  - **Video Tutorials**: Watch step-by-step guides
+</Card>
+
+## Pro Tips
+
+<Tip>
+  **First meeting?** Try a test meeting with just yourself or a colleague to get familiar with how it works before using it in important meetings.
+</Tip>
+
+<Tip>
+  **Recurring meetings?** Set up auto-join once and the agent will automatically attend all instances of your recurring meetings.
+</Tip>
+
+<Tip>
+  **Sales teams?** Connect Salesforce or HubSpot to automatically log calls to your CRM with zero manual work.
+</Tip>
+
+<Tip>
+  **Action items?** Integrate with Asana, Jira, or Trello to automatically create tasks from meeting action items.
+</Tip>
+
+---
+
+Ready to transform your meetings? [Create your account now →](/account-setup/signup-onboarding)

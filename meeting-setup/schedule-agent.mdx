@@ -1,0 +1,235 @@
+---
+title: 'Schedule the AI Agent'
+description: 'Schedule the AI agent for upcoming meetings'
+icon: 'calendar-check'
+---
+
+# How to Schedule the AI Agent for Meetings
+
+Schedule the AI agent in advance to ensure it joins your important meetings automatically.
+
+## Scheduling Methods
+
+### Method 1: Through Calendar Integration
+
+The easiest way to schedule the agent is through your connected calendar.
+
+#### Automatic Scheduling
+
+If auto-join is enabled:
+1. Create a meeting in your calendar (Google Calendar, Outlook, etc.)
+2. Add participants and meeting link
+3. The AI agent will automatically detect and join the meeting
+
+#### Manual Scheduling via Calendar
+
+1. **Create a meeting in your calendar**
+2. **Add the AI agent as a participant**:
+   - Email: `meeting-bot@yourdomain.ai`
+3. **Include the video call link in the description**
+4. **Save the meeting**
+
+The agent will receive the invitation and join at the scheduled time.
+
+### Method 2: Through Dashboard
+
+Schedule meetings directly from your dashboard:
+
+1. **Navigate to "Meetings" in your dashboard**
+2. **Click "Schedule New Meeting"**
+3. **Fill in meeting details**:
+   - Meeting title
+   - Date and time
+   - Duration
+   - Video call link
+   - Participants (optional)
+4. **Select AI agent preferences**:
+   - Recording options
+   - Transcription language
+   - Summary template
+5. **Click "Schedule"**
+
+### Method 3: Bulk Scheduling
+
+For recurring meetings or multiple meetings:
+
+1. **Go to Settings → Bulk Actions**
+2. **Click "Bulk Schedule Agent"**
+3. **Choose scheduling method**:
+   - Import from calendar
+   - Upload CSV file
+   - Manual entry
+4. **Review and confirm**
+5. **Click "Schedule All"**
+
+## Scheduling Options
+
+### Basic Settings
+
+```yaml
+Meeting Information:
+  - Title: [Meeting Name]
+  - Date & Time: [Schedule]
+  - Duration: [Expected length]
+  - Platform: Zoom/Meet/Teams
+  - Meeting Link: [URL]
+```
+
+### Advanced Options
+
+<Tabs>
+  <Tab title="Recording">
+    - **Enable/Disable Recording**: Choose whether to record
+    - **Video Quality**: HD, Standard, or Audio-only
+    - **Recording Storage**: Cloud or local
+    - **Retention Period**: 30/60/90 days or custom
+  </Tab>
+  
+  <Tab title="Transcription">
+    - **Language**: Select primary language
+    - **Speaker Identification**: Enable speaker labels
+    - **Real-time Display**: Show during meeting
+    - **Accuracy Level**: Standard or High-precision
+  </Tab>
+  
+  <Tab title="Summary">
+    - **Template**: Choose summary format
+    - **Key Topics**: Auto-detect or specify
+    - **Action Items**: Enable extraction
+    - **Distribution**: Who receives the summary
+  </Tab>
+  
+  <Tab title="Notifications">
+    - **Pre-meeting Reminder**: 15/30/60 minutes
+    - **Join Confirmation**: Notify when agent joins
+    - **Post-meeting Alert**: Summary ready notification
+    - **Delivery Method**: Email/Slack/Teams
+  </Tab>
+</Tabs>
+
+## Recurring Meetings
+
+Set up the agent for recurring meetings:
+
+### Option 1: Calendar Sync
+
+1. **Create recurring meeting in calendar**
+2. **Add AI agent as participant**
+3. **The agent joins all instances automatically**
+
+### Option 2: Dashboard Recurring Schedule
+
+1. **Schedule meeting through dashboard**
+2. **Enable "Recurring Meeting"**
+3. **Set recurrence pattern**:
+   - Daily
+   - Weekly (select days)
+   - Monthly
+   - Custom pattern
+4. **Set end date or number of occurrences**
+5. **Save schedule**
+
+## Managing Scheduled Meetings
+
+### View Scheduled Meetings
+
+Access your scheduled meetings:
+
+1. **Dashboard → Upcoming Meetings**
+2. View list of all scheduled sessions
+3. Filter by date, type, or status
+
+### Edit Scheduled Meeting
+
+Modify meeting details:
+
+1. **Click on scheduled meeting**
+2. **Select "Edit"**
+3. **Update details**
+4. **Save changes**
+
+<Note>
+  Changes made less than 15 minutes before the meeting may not take effect.
+</Note>
+
+### Cancel Scheduled Meeting
+
+Remove the agent from a scheduled meeting:
+
+1. **Navigate to the meeting in your dashboard**
+2. **Click "Cancel Agent Attendance"**
+3. **Confirm cancellation**
+
+The meeting will remain in your calendar, but the agent won't join.
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Schedule in Advance" icon="clock">
+    Schedule at least 30 minutes before the meeting for optimal setup
+  </Card>
+  <Card title="Verify Meeting Links" icon="link">
+    Double-check that video call links are correct and accessible
+  </Card>
+  <Card title="Set Preferences" icon="sliders">
+    Configure recording and transcription settings beforehand
+  </Card>
+  <Card title="Test First" icon="flask">
+    Try a test meeting before important sessions
+  </Card>
+</CardGroup>
+
+## Scheduling Limits
+
+<Info>
+  Scheduling limits depend on your subscription plan:
+  - **Free Trial**: Up to 5 meetings per month
+  - **Basic**: 25 meetings per month
+  - **Pro**: 100 meetings per month
+  - **Enterprise**: Unlimited
+  
+  Check your current usage in **Settings → Subscription**
+</Info>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Agent didn't join scheduled meeting">
+    **Possible causes**:
+    - Meeting link was invalid or changed
+    - Calendar integration was disconnected
+    - Subscription limit reached
+    - Meeting was too close to scheduling time
+    
+    **Solutions**:
+    - Verify meeting link is correct
+    - Check calendar connection status
+    - Review subscription limits
+    - Schedule at least 30 minutes in advance
+  </Accordion>
+  
+  <Accordion title="Can't find scheduled meetings">
+    - Refresh your dashboard
+    - Check date filters are correctly set
+    - Verify you're logged into the correct account
+    - Check if meetings were accidentally deleted
+  </Accordion>
+  
+  <Accordion title="Recurring meetings not working">
+    - Ensure calendar sync is active
+    - Check recurrence pattern is correctly set
+    - Verify subscription supports recurring meetings
+    - Re-save the recurring meeting schedule
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Join Call Guide" icon="phone" href="/meeting-setup/join-call">
+    Alternative ways to get the agent into calls
+  </Card>
+  <Card title="Remove Agent" icon="phone-slash" href="/meeting-setup/remove-agent">
+    Learn how to remove the agent from meetings
+  </Card>
+</CardGroup>

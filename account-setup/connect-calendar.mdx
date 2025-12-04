@@ -1,0 +1,128 @@
+---
+title: 'Connect Your Calendar'
+description: 'Integrate your calendar for automated AI agent scheduling'
+icon: 'calendar-days'
+---
+
+# Connect Your Calendar
+
+Integrate your calendar to enable the AI agent to automatically join your scheduled meetings.
+
+## Supported Calendar Platforms
+
+Our AI meeting assistant supports the following calendar platforms:
+
+<CardGroup cols={3}>
+  <Card title="Google Calendar" icon="google">
+    Full integration support
+  </Card>
+  <Card title="Microsoft Outlook" icon="microsoft">
+    Full integration support
+  </Card>
+  <Card title="Apple Calendar" icon="apple">
+    iCal integration support
+  </Card>
+</CardGroup>
+
+## Connecting Your Calendar
+
+### Google Calendar Integration
+
+<Steps>
+  <Step title="Navigate to Settings">
+    Go to your account settings and select "Integrations" from the sidebar.
+    <img src="/assets/connect-calendar/1.png" alt="Settings Navigation" />
+  </Step>
+  <Step title="Select Calendar Integration">
+    Click on "Calendar Integration" to start the process.
+    <img src="/assets/connect-calendar/2.png" alt="Select Calendar Integration" />
+  </Step>
+  <Step title="Authorize Access">
+    Click "Connect Google Calendar" and sign in to your Google account.
+    <img src="/assets/connect-calendar/3.png" alt="Authorize Access" />
+  </Step>
+  <Step title="Grant Permissions">
+    Grant the necessary permissions for the AI agent to access your calendar.
+    <img src="/assets/connect-calendar/4.png" alt="Grant Permissions" />
+  </Step>
+  <Step title="Configure Sync">
+    Choose which calendars to sync and set your preferences.
+    <img src="/assets/connect-calendar/5.png" alt="Configure Sync" />
+  </Step>
+  <Step title="Confirmation">
+    You should now see your calendar connected successfully.
+    <img src="/assets/connect-calendar/6.png" alt="Connection Confirmed" />
+  </Step>
+</Steps>
+
+### Microsoft Outlook & Apple Calendar
+
+Follow similar steps for Microsoft Outlook and Apple Calendar by selecting the respective options in the Integrations menu.
+
+## Automated AI Agent Joining
+
+Once your calendar is connected, the AI agent can automatically:
+
+- **Detect Scheduled Meetings**: Scan your calendar for upcoming meetings
+- **Auto-Join**: Join meetings based on your preferences
+- **Send Reminders**: Notify you before the agent joins
+- **Skip Personal Events**: Respect privacy settings and excluded calendars
+
+## Managing Calendar Settings
+
+### Auto-Join Preferences
+
+Configure when the AI agent should automatically join:
+
+```yaml
+Auto-Join Rules:
+  - All meetings with 3+ participants
+  - Meetings with specific keywords in title
+  - Only meetings you explicitly mark
+  - Custom rules based on attendees
+```
+
+### Excluded Calendars
+
+Prevent the agent from accessing certain calendars:
+- Personal calendars
+- Out-of-office calendars
+- Private event calendars
+
+### Sync Frequency
+
+Choose how often to sync with your calendar:
+- **Real-time**: Instant updates (recommended)
+- **Every 5 minutes**: Balanced approach
+- **Every 15 minutes**: Light sync
+- **Manual**: Sync on demand
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Calendar not syncing">
+    - Verify you've granted all necessary permissions
+    - Check your internet connection
+    - Try disconnecting and reconnecting your calendar
+    - Contact support if issues persist
+  </Accordion>
+  
+  <Accordion title="Agent not auto-joining meetings">
+    - Ensure auto-join is enabled in settings
+    - Check that the meeting isn't in an excluded calendar
+    - Verify the AI agent has calendar access permissions
+    - Review your auto-join rules configuration
+  </Accordion>
+  
+  <Accordion title="Permission errors">
+    - Re-authenticate your calendar connection
+    - Ensure your organization allows third-party integrations
+    - Check that calendar sharing settings are properly configured
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<Card title="Schedule AI Agent for Meetings" icon="robot" href="/meeting-setup/schedule-agent">
+  Learn how to schedule the AI agent for specific meetings
+</Card>
